@@ -7,9 +7,9 @@ function Footer() {
     <footer className="footer">
       <div className="content has-text-centered">
         <p>
-          <strong>My Development Portfolio</strong> - a React site by{" "}
+          <strong>My Development Portfolio</strong> - by{" "}
           <a href="https://github.com/EPW80" target="_blank" rel="noreferrer">
-            Erik P. Williams
+            Erik Parra Williams
           </a>
           .
           <hr />
