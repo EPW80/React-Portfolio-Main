@@ -13,7 +13,8 @@ function About() {
         end-users interact with websites and software platforms. Earned a certificate in Full Stack Web
         Development from the University of California Los Angeles Coding Boot Camp. Innovative
         problem-solver who is passionate about developing apps with a focus on mobile-first design and
-        development. Strengths in creativity, teamwork, and building projects from ideation to execution.
+        development. Strengths in creativity, teamwork, and building projects from ideation to execution. Currently
+        a Junior at California State University Fullerton completing a Bachelors of Science in Computer Science.
 
 
       </p>

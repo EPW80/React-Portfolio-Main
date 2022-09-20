@@ -37,8 +37,12 @@ function Header() {
             href="https://github.com/EPW80?tab=repositories"
           >
             <span className="content is-large">Erik Parra Williams</span>
+            <br />
+            
             
           </a>
+          <br />
+          <a href="mailto:erikparrawilliams@gmail.com">erikparrawilliams@gmail.com</a>
         </div>
       </nav>
       {/* Pass the state value and the setter as props to NavTabs */}
