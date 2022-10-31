@@ -36,13 +36,13 @@ const projects = [
   },
   {
     id: 3,
-    title: "NFT-Market",
+    title: "Faucet",
     languages: "web3, solidity, ethereum",
     image: "/img/nft.png",
     packages: "Web3, Solidity, Ethereum",
-    description: "Web3 Dapp showcasing custom NFT's using solidity and ethereum",
-    repo: "https://github.com/EPW80/nft",
-    live: "https://nft-mu-pink.vercel.app/",
+    description: "Faucet application will enable users to donate and withdraw funds from the smart contract",
+    repo: "https://github.com/EPW80/faucet",
+    live: "http://faucet-xgpo.vercel.app/",
   },
   {
     id: 4,

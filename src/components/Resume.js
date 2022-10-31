@@ -30,7 +30,6 @@ function Resume() {
             <li>React, Next.js, Python</li>
             <li>Web3, GraphQL</li>
             <li>C++</li>
-            <li>Github Repo Management</li>
         </ul>
       </div>
     </div>
