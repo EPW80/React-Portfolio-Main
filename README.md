@@ -1,14 +1,19 @@
-# React Portfolio 
-An updated portfolio showcasing my full stack dev projects from UCLA Coding Bootcamp Los Angeles
+# Portfolio
 
-## Live Site
-https://epw80.github.io/react-portfolio-master
+An updated portfolio showcasing a few of my full stack dev projects including a few from UCLA Coding Bootcamp.
 
-## screenshot
+## Deployment
+
+[gh-pages](https://epw80.github.io/react-portfolio-master)
+
+## Demo
+
+![](./public/img/demo.gif)
+
+## Screenshot
 
 ![Preview](./public/img/resume.png)
-![Preview](./public/img/resume2.png)
 
-## Questions
-Reach out to the repo owner: erikparrawilliams@gmail.com.
+## Contributor
 
+Erik Williams
