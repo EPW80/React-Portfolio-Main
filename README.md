@@ -1,6 +1,6 @@
 # Portfolio
 
-An updated portfolio showcasing a few of my full stack dev projects including a few from UCLA Coding Bootcamp.
+An updated portfolio showcasing a few of my full stack development projects including a few from UCLA Coding Bootcamp.
 
 ## Deployment
 
@@ -9,10 +9,6 @@ An updated portfolio showcasing a few of my full stack dev projects including a 
 ## Demo
 
 ![](./public/img/demo.gif)
-
-## Screenshot
-
-![Preview](./public/img/resume.png)
 
 ## Contributor
 

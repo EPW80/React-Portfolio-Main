@@ -14,22 +14,25 @@ function Footer() {
           .
           <hr />
           <a
-            href="https://www.linkedin.com/in/erik-parra-williams-4b4531228/"
-            target="_blank" rel="noreferrer"
+            href="https://www.linkedin.com/in/erik-parra-williams/"
+            target="_blank"
+            rel="noreferrer"
           >
             LinkedIn
           </a>{" "}
-          {" "}{" "}
           {/* <a href="https://twitter.com/EPW80" target="_blank" rel="noreferrer">
             Twitter
           </a>{" "} */}
-          |{" "}{" "}
+          |{" "}
           <a href="https://github.com/EPW80" target="_blank" rel="noreferrer">
             Github
-          </a>
-          {" "}
-          |{" "}{" "}
-          <a href="mailto:erikparrawilliams@gmail.com?" target="_blank" rel="noreferrer">
+          </a>{" "}
+          |{" "}
+          <a
+            href="mailto:erikparrawilliams@tutanota.com?"
+            target="_blank"
+            rel="noreferrer"
+          >
             Email Me
           </a>
         </p>

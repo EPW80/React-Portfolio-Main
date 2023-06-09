@@ -13,7 +13,8 @@ function Resume() {
         <a
           className="button is-info is-light"
           href={process.env.PUBLIC_URL + "/EP_Williams.pdf"}
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         >
           <span className="icon">
             <i className="fas fa-download"></i>
@@ -21,15 +22,15 @@ function Resume() {
           <span>My Resume</span>
         </a>
       </div>
-      <div className="column">
+      {/* <div className="column">
         <p className="content is-medium">Skills</p>
         <hr />
         <ul>
-          <li>C++, HTML, CSS, Javascript</li>
+          <li>C++, Python, HTML, CSS, Javascript</li>
 
 
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }

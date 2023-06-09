@@ -10,8 +10,9 @@ const projects = [
     languages: "C++",
     packages: "make files, tools, server, utils, data",
     image: "/img/tuff.jpg",
-    description: "In the game Tuffle (based on the game Wordle), the user is trying to guess a secret 5 letter word. The user will type in a 5 letter guess, and the server will share information about how close the guess is to the actual answer. ",
-    repo: "https://github.com/EPW80/Tuffle",
+    description:
+      "In the game Tuffle (based on the game Wordle), the user is trying to guess a secret 5 letter word. The user will type in a 5 letter guess, and the server will share information about how close the guess is to the actual answer. ",
+    repo: "https://github.com/EPW80/CSUF-CPSC-121-Tuffle.git",
     live: "https://amajc.github.io/tuffle-frontend/",
   },
   {
@@ -20,7 +21,8 @@ const projects = [
     languages: "css, javascript, solidity",
     packages: "next, ethers, react-router-dom, react",
     image: "/img/tip.jpg",
-    description: "A solidity built tip jar which accepts Ethereum. Connect your wallet and leave the developer a tip along side an optional message. ",
+    description:
+      "A solidity built tip jar which accepts Ethereum. Connect your wallet and leave the developer a tip along side an optional message. ",
     repo: "https://github.com/EPW80/Ethereum-tip-jar",
     live: "https://buy-me-a-coffee-solidity-de-fi-tipping-app.vercel.app/",
   },
@@ -40,7 +42,8 @@ const projects = [
     languages: "web3, solidity, ethereum",
     image: "/img/nft.png",
     packages: "Web3, Solidity, Ethereum",
-    description: "Faucet application will enable users to donate and withdraw funds from the smart contract",
+    description:
+      "Faucet application will enable users to donate and withdraw funds from the smart contract",
     repo: "https://github.com/EPW80/faucet",
     live: "http://faucet-xgpo.vercel.app/",
   },
@@ -50,7 +53,8 @@ const projects = [
     languages: "html, css, js",
     packages: "MERN stack",
     image: "/img/duly-noted.png",
-    description: "This app converts a fully functioning Google Books API search engine built with a RESTful API into a GraphQL API built with Apollo Server. Uses the MERN stack, with a React front end, MongoDB database, and Node.js/Express.js server and API.",
+    description:
+      "This app converts a fully functioning Google Books API search engine built with a RESTful API into a GraphQL API built with Apollo Server. Uses the MERN stack, with a React front end, MongoDB database, and Node.js/Express.js server and API.",
     repo: "https://github.com/EPW80/MERN-Book-Search",
     live: "https://warm-beach-66290.herokuapp.com/",
   },
@@ -66,12 +70,14 @@ const projects = [
   },
   {
     id: 6,
-    title: "THETA",
+    title: "Facebook Clone",
     languages: "html, css, js",
-    packages: "graphql, react-dom, react, react-image-file-resizer, apollo-boost",
+    packages:
+      "graphql, react-dom, react, react-image-file-resizer, apollo-boost",
     image: "/img/caulkbook.png",
-    description: "A social media app where users can post their thoughts and images.",
-    repo: "https://github.com/EPW80/THETA",
+    description:
+      "A social media app where users can post their thoughts and images.",
+    repo: "https://github.com/EPW80/Facebook-clone.git",
     live: "https://gql-client-epw.herokuapp.com/",
   },
 ];

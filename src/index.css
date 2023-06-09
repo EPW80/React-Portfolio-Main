@@ -2,21 +2,19 @@ body {
   font-family: Work Sans;
   text-align: center;
   background-color: aliceblue;
-
 }
 
-.navbar, .navbar-brand {
+.navbar,
+.navbar-brand {
   text-align: center;
   display: block;
   width: 100%;
   background-color: aliceblue;
-  
 }
 
 div.navbar-brand {
   padding-top: 2em;
   margin-bottom: 2em;
-  
 }
 
 .navbar .navbar-brand > .navbar-item,
@@ -32,7 +30,7 @@ main {
 }
 
 .my-pic {
-	clip-path: circle();
+  clip-path: circle();
   width: 250px;
 }
 
@@ -44,14 +42,11 @@ footer.footer {
   background-color: rgb(255, 255, 255);
 }
 
-
-
-
 @media only screen and (max-width: 1024px) {
-    main {
-      margin-top: 2em;
-      margin-bottom: 2em;
-      margin-left: 2em;
-      margin-right: 2em;
-    }
+  main {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
 }
