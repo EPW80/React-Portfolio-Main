@@ -1,10 +1,3 @@
-// CLICKABLE Navigation Titles to take you to Sections
-// About Me (DEFAULT SHOWN)
-// Portfolio
-// Contact Me
-// Resume
-// Navigation Title must highlight when you're on the page.
-
 import React from "react";
 
 function Navigation(props) {

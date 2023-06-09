@@ -22,15 +22,15 @@ function Resume() {
           <span>My Resume</span>
         </a>
       </div>
-      {/* <div className="column">
-        <p className="content is-medium">Skills</p>
-        <hr />
-        <ul>
-          <li>C++, Python, HTML, CSS, Javascript</li>
-
-
-        </ul>
-      </div> */}
+      {
+        <div className="column">
+          <p className="content is-medium"></p>
+          <hr />
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+      }
     </div>
   );
 }
