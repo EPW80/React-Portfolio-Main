@@ -1,5 +1,3 @@
-//Needs links to my Github, Linkedin, and a Third Platform?
-
 import React from "react";
 
 function Footer() {
@@ -13,17 +11,9 @@ function Footer() {
           </a>
           .
           <hr />
-          <a
-            href="https://www.linkedin.com/in/erik-parra-williams/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          {/* <a href="https://www.linkedin.com/in/erik-parra-williams/" target="_blank" rel="noreferrer">
             LinkedIn
-          </a>{" "}
-          {/* <a href="https://twitter.com/EPW80" target="_blank" rel="noreferrer">
-            Twitter
           </a>{" "} */}
-          |{" "}
           <a href="https://github.com/EPW80" target="_blank" rel="noreferrer">
             Github
           </a>{" "}

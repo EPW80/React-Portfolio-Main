@@ -1,6 +1,3 @@
-// Link to a downloadable resume
-// a list of the developer’s proficiencies
-
 import React from "react";
 
 function Resume() {
@@ -12,7 +9,7 @@ function Resume() {
 
         <a
           className="button is-info is-light"
-          href={process.env.PUBLIC_URL + "/EP_Williams.pdf"}
+          href={process.env.PUBLIC_URL + "/Erik Parra Williams.pdf"}
           target="_blank"
           rel="noreferrer"
         >
