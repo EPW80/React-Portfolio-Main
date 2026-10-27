@@ -166,7 +166,7 @@ textarea {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center top;
+  background-position: 62% 18%;
   transform: scale(1.04);
   animation: hero-zoom 1.4s ease both;
   z-index: 0;
