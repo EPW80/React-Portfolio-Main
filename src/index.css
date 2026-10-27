@@ -408,8 +408,7 @@ textarea {
   border-bottom-color: var(--accent);
 }
 
-.about-layout,
-.resume-layout {
+.about-layout {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(1.5rem, 4vw, 3rem);
@@ -600,8 +599,7 @@ textarea {
   }
 
   .project-grid,
-  .about-layout,
-  .resume-layout {
+  .about-layout {
     grid-template-columns: 1fr;
   }
 }
