@@ -1,13 +1,29 @@
-# Erik Williams Portfolio
+# Erik Parra Williams — Portfolio
 
-Welcome to my portfolio, where you will find an updated selection of my most recent and prominent full-stack development projects. These projects combine personal endeavors and some assignments completed during my time at the UCLA Coding Bootcamp. By delving into these projects, you will see a glimpse of my coding capabilities, design philosophy, and the breadth of technologies and frameworks I have worked with. The portfolio is hosted on GitHub Pages and can be accessed anytime through the Erik Williams Portfolio link. Here, you will find comprehensive details of each project, including its purposes, the challenges encountered during development, the solutions devised to overcome these challenges, and the final results.
+Modern single-page portfolio for full-stack projects, resume, and contact.
 
-## Interactive Demo
+## Stack
 
-You can view the interactive demo below for a quick overview of the portfolio's look and feel. This demo showcases the portfolio's user interface and offers a snapshot of how the projects are displayed. Please note that the portfolio site may contain more recent updates and projects not featured in this demo.
+- React 18 + Vite
+- Custom CSS (no UI framework)
+- Formspree for contact
+- GitHub Pages deploy
 
-![](./public/img/demo.gif)
+## Scripts
 
-## Contributor
+```bash
+npm install
+npm run dev      # local development
+npm run build    # production build → dist/
+npm run preview  # preview production build
+npm test
+npm run deploy   # build + publish to gh-pages
+```
 
-Erik Williams.
+## Sections
+
+- Hero with brand-first introduction
+- Selected work (live demos + repos)
+- About & skills
+- Resume download
+- Contact form
