@@ -10,14 +10,16 @@ function About() {
       <div className="about-layout">
         <div className="about-copy">
           <p>
-            Full-stack developer with a business background that shapes how
-            people actually use websites and software. Certified in full-stack
-            web development through the UCLA Coding Boot Camp, with strengths in
-            creativity, teamwork, and taking ideas from sketch to ship.
+            Erik Parra Williams is a full-stack developer with a business
+            background that shapes how people actually use websites and
+            software. Certified through the UCLA Coding Boot Camp, with
+            strengths in creativity, teamwork, and taking ideas from sketch to
+            ship.
           </p>
           <p>
             Currently completing a B.S. in Computer Science at California State
-            University, Fullerton — building across the stack and into Web3.
+            University, Fullerton — building React interfaces, Node/GraphQL
+            APIs, and Solidity/Web3 experiments end to end.
           </p>
         </div>
         <ul className="skill-list" aria-label="Skills">

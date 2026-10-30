@@ -14,14 +14,19 @@ function Resume() {
           Download the full PDF for the complete timeline, coursework, and
           references.
         </p>
-        <a
-          className="btn btn--primary"
-          href={`${import.meta.env.BASE_URL}Erik Parra Williams.pdf`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Download PDF
-        </a>
+        <div className="resume-panel__actions">
+          <a
+            className="btn btn--primary"
+            href={`${import.meta.env.BASE_URL}Erik Parra Williams.pdf`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Download PDF
+          </a>
+          <a className="btn btn--ghost" href="#contact">
+            Contact me
+          </a>
+        </div>
       </div>
     </section>
   );

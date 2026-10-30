@@ -44,7 +44,12 @@ function Contact() {
         <p className="section__eyebrow">Contact</p>
         <h2 className="section__title">Let&apos;s build something</h2>
         <p className="section__lede">
-          Have a role, collaboration, or question? Send a note and I&apos;ll reply.
+          Have a role, collaboration, or question? Send a note and I&apos;ll
+          reply — or{" "}
+          <a href="mailto:erikparrawilliams@tutanota.com">
+            email erikparrawilliams@tutanota.com
+          </a>
+          .
         </p>
       </div>
       <form className="contact-form" onSubmit={handleSubmit} noValidate>
