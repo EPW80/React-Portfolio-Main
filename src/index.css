@@ -36,10 +36,15 @@ body {
     radial-gradient(1200px 700px at 12% -10%, #d7ebe6 0%, transparent 55%),
     radial-gradient(900px 600px at 100% 8%, #d9e4ec 0%, transparent 50%),
     linear-gradient(180deg, var(--mist) 0%, var(--paper) 40%, var(--fog) 100%);
-  background-attachment: fixed;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 901px) {
+  body {
+    background-attachment: fixed;
+  }
 }
 
 body::before {
@@ -406,8 +411,28 @@ textarea {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-card__tags li {
+  padding: 0.28rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.75);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
 .project-card__actions {
   display: flex;
+  align-items: center;
   gap: 0.65rem;
   margin-top: auto;
   padding-top: 0.5rem;
@@ -424,6 +449,16 @@ textarea {
 
 .project-card__actions a:hover {
   border-bottom-color: var(--accent);
+}
+
+.project-card__muted {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.project-card__media--static {
+  cursor: default;
 }
 
 .about-layout {
@@ -469,6 +504,33 @@ textarea {
 .resume-panel p {
   margin: 0 0 1.25rem;
   color: var(--muted);
+}
+
+.resume-list {
+  list-style: none;
+  margin: 0 0 1.35rem;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+  text-align: left;
+}
+
+.resume-list li {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.resume-list__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.resume-list__detail {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
 }
 
 .resume-panel__actions {

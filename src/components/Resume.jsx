@@ -1,3 +1,5 @@
+import { resumeHighlights } from "../data/projects";
+
 function Resume() {
   return (
     <section id="resume" className="section" data-section>
@@ -10,6 +12,14 @@ function Resume() {
         </p>
       </div>
       <div className="resume-panel">
+        <ul className="resume-list">
+          {resumeHighlights.map((item) => (
+            <li key={item.label}>
+              <span className="resume-list__label">{item.label}</span>
+              <span className="resume-list__detail">{item.detail}</span>
+            </li>
+          ))}
+        </ul>
         <p>
           Download the full PDF for the complete timeline, coursework, and
           references.
@@ -19,7 +29,7 @@ function Resume() {
             className="btn btn--primary"
             href={`${import.meta.env.BASE_URL}Erik Parra Williams.pdf`}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Download PDF
           </a>

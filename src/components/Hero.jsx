@@ -4,7 +4,7 @@ function Hero() {
       <div
         className="hero__media"
         style={{
-          backgroundImage: `url(${import.meta.env.BASE_URL}img/erik.JPEG)`,
+          backgroundImage: `url(${import.meta.env.BASE_URL}img/erik.webp)`,
         }}
         role="img"
         aria-label="Erik Parra Williams"
@@ -25,7 +25,7 @@ function Hero() {
             className="btn btn--ghost"
             href={`${import.meta.env.BASE_URL}Erik Parra Williams.pdf`}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Download resume
           </a>

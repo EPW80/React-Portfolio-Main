@@ -7,8 +7,19 @@ function Footer() {
         <strong>Erik Parra Williams</strong> — full-stack portfolio · {year}
       </p>
       <div className="site-footer__links">
-        <a href="https://github.com/EPW80" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/EPW80"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/erik-parra-williams/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
         </a>
         <a href="mailto:erikparrawilliams@tutanota.com">Email</a>
       </div>
