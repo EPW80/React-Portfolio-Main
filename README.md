@@ -2,12 +2,19 @@
 
 Modern single-page portfolio for full-stack projects, resume, and contact.
 
+## Live site
+
+Primary (Vercel): https://react-portfolio-main-erik-williams-projects.vercel.app/
+
+Legacy GitHub Pages build path remains supported for `gh-pages` deploys.
+
 ## Stack
 
 - React 18 + Vite
 - Custom CSS (no UI framework)
 - Formspree for contact
-- GitHub Pages deploy
+- Vercel production hosting
+- Optional GitHub Pages deploy
 
 ## Scripts
 
@@ -17,7 +24,7 @@ npm run dev      # local development
 npm run build    # production build → dist/
 npm run preview  # preview production build
 npm test
-npm run deploy   # build + publish to gh-pages
+npm run deploy   # build + publish to gh-pages (legacy)
 ```
 
 ## Sections
@@ -25,18 +32,11 @@ npm run deploy   # build + publish to gh-pages
 - Hero with brand-first introduction
 - Selected work (live demos + repos)
 - About & skills
-- Resume download
+- Resume highlights + PDF download
 - Contact form
 
-## Plugin workflow notes
+## Environment
 
-What this environment can run today vs. deferred:
+Copy `.env.example` to `.env.local` for local overrides:
 
-| Plugin | Status on this pass |
-| --- | --- |
-| Mobbin | Blocked — paid Mobbin plan required for MCP search |
-| Figma | Authenticated (View seat) — design write-back deferred |
-| Runway | Authenticated; image models available — kept real project screenshots instead of AI covers |
-| Chrome DevTools / Playwright | Used for local smoke verification |
-| Vercel | Linked or attempted if team auth is available |
-| Ahrefs / Semrush / Profound | Deferred until after a stable production URL + API access |
+- `VITE_FORMSPREE_ID` — Formspree form id (defaults to the production form)

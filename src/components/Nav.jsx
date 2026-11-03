@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 const links = [
   { id: "work", label: "Work" },
@@ -9,6 +9,27 @@ const links = [
 
 function Nav({ activeSection }) {
   const [open, setOpen] = useState(false);
+  const menuId = useId();
+  const toggleRef = useRef(null);
+  const firstLinkRef = useRef(null);
+
+  useEffect(() => {
+    if (!open) {
+      return undefined;
+    }
+
+    firstLinkRef.current?.focus();
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   return (
     <header className="site-nav">
@@ -16,21 +37,24 @@ function Nav({ activeSection }) {
         Erik Parra Williams
       </a>
       <button
+        ref={toggleRef}
         className="site-nav__toggle"
         type="button"
         aria-expanded={open}
-        aria-controls="site-nav-links"
+        aria-controls={menuId}
+        aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => setOpen((value) => !value)}
       >
-        Menu
+        {open ? "Close" : "Menu"}
       </button>
       <ul
-        id="site-nav-links"
+        id={menuId}
         className={`site-nav__links${open ? " is-open" : ""}`}
       >
-        {links.map((link) => (
+        {links.map((link, index) => (
           <li key={link.id}>
             <a
+              ref={index === 0 ? firstLinkRef : undefined}
               href={`#${link.id}`}
               aria-current={activeSection === link.id ? "page" : undefined}
               onClick={() => setOpen(false)}
