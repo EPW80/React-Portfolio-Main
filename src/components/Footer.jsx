@@ -4,7 +4,8 @@ function Footer() {
   return (
     <footer className="site-footer">
       <p>
-        <strong>Erik Parra Williams</strong> — full-stack portfolio · {year}
+        <strong>Erik Parra Williams</strong> — full-stack &amp; backend
+        portfolio · {year}
       </p>
       <div className="site-footer__links">
         <a
@@ -15,7 +16,7 @@ function Footer() {
           GitHub
         </a>
         <a
-          href="https://www.linkedin.com/in/erik-parra-williams/"
+          href="https://www.linkedin.com/in/erikparrawilliams"
           target="_blank"
           rel="noopener noreferrer"
         >

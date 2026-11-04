@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "homepage": "https://react-portfolio-main-erik-williams-projects.vercel.app/",
-  "description": "Erik Parra Williams — full-stack developer portfolio",
+  "description": "Erik Parra Williams — full-stack & backend engineer portfolio",
   "scripts": {
     "dev": "vite",
     "start": "vite",

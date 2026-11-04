@@ -1,4 +1,4 @@
-import { resumeHighlights } from "../data/projects";
+import { education, experience } from "../data/projects";
 
 function Resume() {
   return (
@@ -12,8 +12,19 @@ function Resume() {
         </p>
       </div>
       <div className="resume-panel">
-        <ul className="resume-list">
-          {resumeHighlights.map((item) => (
+        <ul className="resume-list" aria-label="Work experience">
+          {experience.map((item) => (
+            <li key={`${item.company}-${item.role}`}>
+              <span className="resume-list__label">
+                {item.role} · {item.company}
+              </span>
+              <span className="resume-list__dates">{item.dates}</span>
+              <span className="resume-list__detail">{item.summary}</span>
+            </li>
+          ))}
+        </ul>
+        <ul className="resume-list resume-list--education" aria-label="Education">
+          {education.map((item) => (
             <li key={item.label}>
               <span className="resume-list__label">{item.label}</span>
               <span className="resume-list__detail">{item.detail}</span>
@@ -21,13 +32,13 @@ function Resume() {
           ))}
         </ul>
         <p>
-          Download the full PDF for the complete timeline, coursework, and
-          references.
+          Download the full PDF for the complete timeline, skills, and project
+          detail.
         </p>
         <div className="resume-panel__actions">
           <a
             className="btn btn--primary"
-            href={`${import.meta.env.BASE_URL}Erik Parra Williams.pdf`}
+            href={`${import.meta.env.BASE_URL}Erik-Williams-Resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
           >

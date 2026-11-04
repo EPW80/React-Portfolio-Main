@@ -1,6 +1,6 @@
 # Erik Parra Williams — Portfolio
 
-Modern single-page portfolio for full-stack projects, resume, and contact.
+Modern single-page portfolio for full-stack & backend projects, resume, and contact.
 
 ## Live site
 

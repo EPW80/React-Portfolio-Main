@@ -10,16 +10,17 @@ function About() {
       <div className="about-layout">
         <div className="about-copy">
           <p>
-            Erik Parra Williams is a full-stack developer with a business
-            background that shapes how people actually use websites and
-            software. Certified through the UCLA Coding Boot Camp, with
-            strengths in creativity, teamwork, and taking ideas from sketch to
+            Erik Parra Williams is a full-stack and backend software engineer
+            with a B.S. in Computer Science from California State University,
+            Fullerton. Certified through the UCLA Extension Full-Stack Web
+            Development program, with strengths in taking ideas from sketch to
             ship.
           </p>
           <p>
-            Currently completing a B.S. in Computer Science at California State
-            University, Fullerton — building React interfaces, Node/GraphQL
-            APIs, and Solidity/Web3 experiments end to end.
+            Lead contract developer for a WooCommerce e-commerce business —
+            owning the storefront, third-party API integrations, and a Go payout
+            service backed by hundreds of automated tests. Deploys on AWS with
+            Docker and CI/CD, from database design through production.
           </p>
         </div>
         <ul className="skill-list" aria-label="Skills">
