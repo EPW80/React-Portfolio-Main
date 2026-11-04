@@ -59,9 +59,10 @@ function ProjectCard({ project, index }) {
             <a href={project.live} target="_blank" rel="noopener noreferrer">
               Live site
             </a>
-          ) : (
+          ) : null}
+          {!hasLive || project.status ? (
             <span className="project-card__muted">{statusLabel}</span>
-          )}
+          ) : null}
         </div>
       </div>
     </article>

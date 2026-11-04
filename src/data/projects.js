@@ -27,7 +27,7 @@ export const projects = [
     description:
       "Lifestyle editorial publication with App Router routes for home, category fronts, and articles — typed async content repository ready for a CMS adapter.",
     repo: null,
-    live: null,
+    live: "https://sugarmenu-staging.dev40.workers.dev/",
     status: "In progress",
   },
   {
