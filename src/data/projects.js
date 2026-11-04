@@ -1,16 +1,37 @@
 export const projects = [
   {
     id: 0,
-    title: "Tuffle",
-    tags: ["C++", "Make", "Game server"],
-    image: "/img/tuff.webp",
+    title: "Real-Time Chat Analytics Platform",
+    tags: ["Go", "WebSockets", "DynamoDB", "React", "TypeScript", "AWS"],
+    image: null,
     description:
-      "A Wordle-style game where players guess a secret five-letter word. The server scores each guess and reveals how close it is to the answer.",
-    repo: "https://github.com/EPW80/CSUF-CPSC-121-Tuffle",
-    live: "https://amajc.github.io/tuffle-frontend/",
+      "Go WebSocket chat server with a live React dashboard for message volume, active users, and response times — plus ElevenLabs voice alerts with content-hash audio caching.",
+    repo: "https://github.com/EPW80/Chat-Analytics-Platform",
+    live: null,
   },
   {
     id: 1,
+    title: "AgentFlow",
+    tags: ["Python", "FastAPI", "Docker", "Claude API", "AWS Bedrock"],
+    image: null,
+    description:
+      "Dockerized FastAPI service that runs multi-step AI workflows through Claude and AWS Bedrock, covered by automated tests.",
+    repo: "https://github.com/EPW80/agentflow",
+    live: "https://agentflow-orcin.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "SugarMenu",
+    tags: ["Next.js", "React", "TypeScript"],
+    image: null,
+    description:
+      "Lifestyle editorial publication with App Router routes for home, category fronts, and articles — typed async content repository ready for a CMS adapter.",
+    repo: null,
+    live: null,
+    status: "In progress",
+  },
+  {
+    id: 3,
     title: "Faucet",
     tags: ["Solidity", "Web3", "Ethereum"],
     image: "/img/nft.webp",
@@ -19,73 +40,52 @@ export const projects = [
     repo: "https://github.com/EPW80/faucet",
     live: "https://faucet-xgpo.vercel.app/",
   },
-  {
-    id: 2,
-    title: "Social Clone",
-    tags: ["React", "GraphQL", "Apollo"],
-    image: "/img/caulkbook.webp",
-    description:
-      "A social feed where users can share thoughts and images with friends.",
-    repo: "https://github.com/EPW80/Facebook-clone",
-    live: "https://gql-client-epw.herokuapp.com/",
-  },
-  {
-    id: 3,
-    title: "Ethereum Tip Jar",
-    tags: ["Next.js", "Solidity", "ethers"],
-    image: "/img/tip.webp",
-    description:
-      "A Solidity tip jar that accepts Ethereum. Connect a wallet, leave a tip, and optionally send a message.",
-    repo: "https://github.com/EPW80/Ethereum-tip-jar",
-    live: null,
-  },
-  {
-    id: 4,
-    title: "Budget Tracker",
-    tags: ["Express", "MongoDB", "Handlebars"],
-    image: "/img/budget.webp",
-    description: "Track income and expenses with a persistent budget dashboard.",
-    repo: "https://github.com/EPW80/Budget-Tracker",
-    live: null,
-  },
-  {
-    id: 5,
-    title: "Book Search",
-    tags: ["MERN", "GraphQL", "Apollo Server"],
-    image: "/img/duly-noted.webp",
-    description:
-      "Google Books search rebuilt as a GraphQL API with Apollo Server on a MERN stack.",
-    repo: "https://github.com/EPW80/MERN-Book-Search",
-    live: null,
-  },
 ];
 
 export const skills = [
-  "JavaScript / TypeScript",
-  "React",
+  "Python / Go",
+  "TypeScript / JavaScript",
+  "React / Next.js",
+  "FastAPI / Django",
   "Node.js / Express",
-  "MongoDB / GraphQL",
-  "Solidity / Web3",
-  "HTML / CSS",
-  "C++",
-  "Git / GitHub",
+  "AWS / Docker",
+  "PostgreSQL / DynamoDB",
+  "GraphQL / REST",
+  "CI/CD / GitHub Actions",
+  "Pytest / Vitest",
 ];
 
-export const resumeHighlights = [
+export const experience = [
   {
-    label: "Focus",
-    detail: "Full-stack web apps, React UIs, and Solidity / Web3 experiments",
+    role: "AI Systems Consultant",
+    company: "House of Helix LLC",
+    dates: "Aug 2026 – Present",
+    summary:
+      "Design LLM-backed agents and internal AI tools; build API, database, and CRM integrations; shipping a Next.js wholesale storefront with server-side pricing.",
   },
   {
+    role: "Full-Stack Developer (Contract)",
+    company: "Advanced Sequence",
+    dates: "Aug 2026 – Present",
+    summary:
+      "Lead WooCommerce developer owning theme, checkout, SEO, and structured data; built a Go affiliate payout service with 299 automated tests.",
+  },
+  {
+    role: "Full-Stack Development Intern",
+    company: "Cabana Joes Hospitality Products",
+    dates: "Apr 2022 – Aug 2022",
+    summary:
+      "Built an e-commerce platform with 20+ reusable React components and full test coverage; improved query speed with indexing and caching.",
+  },
+];
+
+export const education = [
+  {
     label: "Education",
-    detail: "B.S. Computer Science — California State University, Fullerton",
+    detail: "B.S. Computer Science — California State University, Fullerton (Jan 2026)",
   },
   {
     label: "Certificate",
-    detail: "Full Stack Web Development — UCLA Coding Boot Camp",
-  },
-  {
-    label: "Strengths",
-    detail: "End-to-end delivery, product thinking, clear collaboration",
+    detail: "Full-Stack Web Development — UCLA Extension (Aug 2022)",
   },
 ];

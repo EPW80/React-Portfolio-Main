@@ -8,8 +8,9 @@ function Portfolio() {
         <p className="section__eyebrow">Selected work</p>
         <h2 className="section__title">Projects that show the range</h2>
         <p className="section__lede">
-          Web apps, blockchain experiments, and full-stack builds — source for
-          every project, with live demos where they&apos;re still online.
+          AI workflows, real-time backends, and full-stack product builds —
+          source for every project, with live demos where they&apos;re still
+          online.
         </p>
       </div>
       <div className="project-grid">

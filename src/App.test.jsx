@@ -25,27 +25,31 @@ describe("App", () => {
     expect(document.getElementById("contact")).toBeTruthy();
   });
 
-  it("lists featured projects with repository links", () => {
+  it("lists featured projects with repository links where available", () => {
     render(<App />);
+    const repoCount = projects.filter((project) => project.repo).length;
     expect(screen.getAllByRole("link", { name: /repository/i })).toHaveLength(
-      projects.length
+      repoCount
     );
-    expect(screen.getByRole("heading", { name: /tuffle/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /faucet/i })).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: /social clone/i })
+      screen.getByRole("heading", { name: /chat analytics/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /agentflow/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /sugarmenu/i })
     ).toBeInTheDocument();
   });
 
-  it("hides live CTAs when demos are offline", () => {
+  it("hides live CTAs when demos are offline and shows status labels", () => {
     render(<App />);
     const liveCount = projects.filter((project) => project.live).length;
-    expect(
-      screen.getAllByRole("link", { name: "Live site" })
-    ).toHaveLength(liveCount);
-    expect(screen.getAllByText(/demo offline/i)).toHaveLength(
-      projects.length - liveCount
+    expect(screen.getAllByRole("link", { name: "Live site" })).toHaveLength(
+      liveCount
     );
+    expect(screen.getByText(/in progress/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/demo offline/i).length).toBeGreaterThan(0);
   });
 
   it("shows contact validation when email is invalid", async () => {
@@ -59,14 +63,17 @@ describe("App", () => {
     expect(screen.getByText(/please enter a valid email/i)).toBeInTheDocument();
   });
 
-  it("shows resume highlights and linkedin footer link", () => {
+  it("shows resume experience, education, and linkedin footer link", () => {
     render(<App />);
+    expect(screen.getByText(/house of helix llc/i)).toBeInTheDocument();
     expect(
-      screen.getByText(/full stack web development — ucla coding boot camp/i)
+      screen.getByText(
+        /b\.s\. computer science — california state university, fullerton \(jan 2026\)/i
+      )
     ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /linkedin/i })).toHaveAttribute(
       "href",
-      "https://www.linkedin.com/in/erik-parra-williams/"
+      "https://www.linkedin.com/in/erikparrawilliams"
     );
   });
 });

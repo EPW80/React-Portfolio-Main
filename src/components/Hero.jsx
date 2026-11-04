@@ -12,10 +12,12 @@ function Hero() {
       <div className="hero__veil" aria-hidden="true" />
       <div className="hero__copy">
         <h1 className="hero__brand">Erik Parra Williams</h1>
-        <p className="hero__headline">Full-stack developer building products end to end.</p>
+        <p className="hero__headline">
+          Full-stack &amp; backend engineer shipping products end to end.
+        </p>
         <p className="hero__lede">
-          From React interfaces to Solidity contracts — shipping clear, useful
-          software with craft and care.
+          React and Next.js interfaces, Python and Go services, and AWS-backed
+          deployments — from database design through production.
         </p>
         <div className="hero__actions">
           <a className="btn btn--primary" href="#work">
@@ -23,7 +25,7 @@ function Hero() {
           </a>
           <a
             className="btn btn--ghost"
-            href={`${import.meta.env.BASE_URL}Erik Parra Williams.pdf`}
+            href={`${import.meta.env.BASE_URL}Erik-Williams-Resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
           >
