@@ -42,14 +42,19 @@ describe("App", () => {
     ).toBeInTheDocument();
   });
 
-  it("hides live CTAs when demos are offline and shows status labels", () => {
+  it("shows live CTAs for demos and in-progress status when set", () => {
     render(<App />);
     const liveCount = projects.filter((project) => project.live).length;
     expect(screen.getAllByRole("link", { name: "Live site" })).toHaveLength(
       liveCount
     );
+    expect(liveCount).toBe(projects.length);
     expect(screen.getByText(/in progress/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/demo offline/i).length).toBeGreaterThan(0);
+    expect(
+      screen.getByRole("link", {
+        name: /real-time chat analytics platform live site/i,
+      })
+    ).toHaveAttribute("href", "https://chat-analytics-platform.vercel.app/");
   });
 
   it("shows contact validation when email is invalid", async () => {

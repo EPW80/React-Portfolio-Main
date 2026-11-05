@@ -7,7 +7,7 @@ export const projects = [
     description:
       "Go WebSocket chat server with a live React dashboard for message volume, active users, and response times — plus ElevenLabs voice alerts with content-hash audio caching.",
     repo: "https://github.com/EPW80/Chat-Analytics-Platform",
-    live: null,
+    live: "https://chat-analytics-platform.vercel.app/",
   },
   {
     id: 1,
