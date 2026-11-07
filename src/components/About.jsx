@@ -1,4 +1,4 @@
-import { skills } from "../data/projects";
+import { skills } from "../data/content";
 
 function About() {
   return (

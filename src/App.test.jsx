@@ -2,7 +2,9 @@ import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it } from "vitest";
 import App from "./App";
-import { projects } from "./data/projects";
+import { education, projects } from "./data/content";
+import { SITE, resumePdfHref } from "./data/site";
+import { validateEmail } from "./utils/helpers";
 
 afterEach(() => {
   cleanup();
@@ -12,7 +14,7 @@ describe("App", () => {
   it("renders the brand name in the hero", () => {
     render(<App />);
     expect(
-      screen.getByRole("heading", { level: 1, name: /erik parra williams/i })
+      screen.getByRole("heading", { level: 1, name: new RegExp(SITE.name, "i") })
     ).toBeInTheDocument();
   });
 
@@ -25,36 +27,37 @@ describe("App", () => {
     expect(document.getElementById("contact")).toBeTruthy();
   });
 
-  it("lists featured projects with repository links where available", () => {
+  it("lists featured projects with repository and live links from data", () => {
     render(<App />);
     const repoCount = projects.filter((project) => project.repo).length;
+    const liveCount = projects.filter((project) => project.live).length;
+
     expect(screen.getAllByRole("link", { name: /repository/i })).toHaveLength(
       repoCount
     );
-    expect(
-      screen.getByRole("heading", { name: /chat analytics/i })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", { name: /agentflow/i })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", { name: /sugarmenu/i })
-    ).toBeInTheDocument();
-  });
-
-  it("shows live CTAs for demos and in-progress status when set", () => {
-    render(<App />);
-    const liveCount = projects.filter((project) => project.live).length;
     expect(screen.getAllByRole("link", { name: "Live site" })).toHaveLength(
       liveCount
     );
-    expect(liveCount).toBe(projects.length);
+
+    for (const project of projects) {
+      expect(
+        screen.getByRole("heading", { name: project.title })
+      ).toBeInTheDocument();
+    }
+
     expect(screen.getByText(/in progress/i)).toBeInTheDocument();
-    expect(
-      screen.getByRole("link", {
-        name: /real-time chat analytics platform live site/i,
-      })
-    ).toHaveAttribute("href", "https://chat-analytics-platform.vercel.app/");
+  });
+
+  it("links resume downloads to the shared PDF path", () => {
+    render(<App />);
+    const pdfHref = resumePdfHref();
+    const resumeLinks = screen.getAllByRole("link", {
+      name: /download (resume|pdf)/i,
+    });
+    expect(resumeLinks.length).toBeGreaterThanOrEqual(2);
+    for (const link of resumeLinks) {
+      expect(link).toHaveAttribute("href", pdfHref);
+    }
   });
 
   it("shows contact validation when email is invalid", async () => {
@@ -72,13 +75,19 @@ describe("App", () => {
     render(<App />);
     expect(screen.getByText(/house of helix llc/i)).toBeInTheDocument();
     expect(
-      screen.getByText(
-        /b\.s\. computer science — california state university, fullerton \(jan 2026\)/i
-      )
+      screen.getByText(new RegExp(education[0].detail.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"))
     ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /linkedin/i })).toHaveAttribute(
       "href",
-      "https://www.linkedin.com/in/erikparrawilliams"
+      SITE.linkedInUrl
     );
+  });
+});
+
+describe("validateEmail", () => {
+  it("accepts simple valid addresses and rejects incomplete ones", () => {
+    expect(validateEmail("erik@example.com")).toBe(true);
+    expect(validateEmail("not-an-email")).toBe(false);
+    expect(validateEmail("missing@domain")).toBe(false);
   });
 });

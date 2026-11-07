@@ -1,3 +1,5 @@
+import { resumePdfHref } from "../data/site";
+
 function Hero() {
   return (
     <section id="home" className="hero" data-section>
@@ -25,7 +27,7 @@ function Hero() {
           </a>
           <a
             className="btn btn--ghost"
-            href={`${import.meta.env.BASE_URL}Erik-Williams-Resume.pdf`}
+            href={resumePdfHref()}
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useForm } from "@formspree/react";
+import { SITE, formspreeFormId } from "../data/site";
 import { validateEmail } from "../utils/helpers";
-
-const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID || "xknyyydk";
 
 const initialErrors = {
   name: "",
@@ -11,7 +10,7 @@ const initialErrors = {
 };
 
 function Contact() {
-  const [state, handleSubmit, reset] = useForm(FORMSPREE_ID);
+  const [state, handleSubmit, reset] = useForm(formspreeFormId());
   const [fieldErrors, setFieldErrors] = useState(initialErrors);
 
   const validateField = (name, value) => {
@@ -86,10 +85,7 @@ function Contact() {
         <p className="section__lede">
           Have a role, collaboration, or question? Send a note and I&apos;ll
           reply — or{" "}
-          <a href="mailto:erikparrawilliams@tutanota.com">
-            email erikparrawilliams@tutanota.com
-          </a>
-          .
+          <a href={`mailto:${SITE.email}`}>email {SITE.email}</a>.
         </p>
       </div>
       <form className="contact-form" onSubmit={onSubmit} noValidate>
