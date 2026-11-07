@@ -404,13 +404,6 @@ textarea {
   font-size: 0.98rem;
 }
 
-.project-card__meta {
-  margin: 0;
-  font-size: 0.82rem;
-  color: var(--ink-soft);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-}
-
 .project-card__tags {
   display: flex;
   flex-wrap: wrap;

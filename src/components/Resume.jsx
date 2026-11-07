@@ -1,4 +1,5 @@
-import { education, experience } from "../data/projects";
+import { education, experience } from "../data/content";
+import { resumePdfHref } from "../data/site";
 
 function Resume() {
   return (
@@ -38,7 +39,7 @@ function Resume() {
         <div className="resume-panel__actions">
           <a
             className="btn btn--primary"
-            href={`${import.meta.env.BASE_URL}Erik-Williams-Resume.pdf`}
+            href={resumePdfHref()}
             target="_blank"
             rel="noopener noreferrer"
           >
