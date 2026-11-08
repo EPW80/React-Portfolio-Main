@@ -47,23 +47,25 @@ function Nav({ activeSection }) {
       >
         {open ? "Close" : "Menu"}
       </button>
-      <ul
-        id={menuId}
-        className={`site-nav__links${open ? " is-open" : ""}`}
-      >
-        {links.map((link, index) => (
-          <li key={link.id}>
-            <a
-              ref={index === 0 ? firstLinkRef : undefined}
-              href={`#${link.id}`}
-              aria-current={activeSection === link.id ? "page" : undefined}
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <nav aria-label="Primary">
+        <ul
+          id={menuId}
+          className={`site-nav__links${open ? " is-open" : ""}`}
+        >
+          {links.map((link, index) => (
+            <li key={link.id}>
+              <a
+                ref={index === 0 ? firstLinkRef : undefined}
+                href={`#${link.id}`}
+                aria-current={activeSection === link.id ? "true" : undefined}
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }
