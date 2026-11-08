@@ -51,10 +51,12 @@ function Contact() {
 
   if (state.succeeded) {
     return (
-      <section id="contact" className="section" data-section>
+      <section id="contact" className="section" data-section aria-labelledby="contact-title">
         <div className="section__head">
           <p className="section__eyebrow">Contact</p>
-          <h2 className="section__title">Message received</h2>
+          <h2 id="contact-title" className="section__title">
+            Message received
+          </h2>
         </div>
         <div className="form-success">
           <p>Thanks for reaching out — I&apos;ll get back to you soon.</p>
@@ -78,10 +80,12 @@ function Contact() {
     (Array.isArray(state.errors) ? state.errors[0]?.message : "");
 
   return (
-    <section id="contact" className="section" data-section>
+    <section id="contact" className="section" data-section aria-labelledby="contact-title">
       <div className="section__head">
         <p className="section__eyebrow">Contact</p>
-        <h2 className="section__title">Let&apos;s build something</h2>
+        <h2 id="contact-title" className="section__title">
+          Let&apos;s build something
+        </h2>
         <p className="section__lede">
           Have a role, collaboration, or question? Send a note and I&apos;ll
           reply — or{" "}

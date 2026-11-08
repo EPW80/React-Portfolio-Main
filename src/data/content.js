@@ -1,3 +1,14 @@
+export const profile = {
+  role: "Full-stack and backend software engineer",
+  headline: "Full-stack & backend engineer shipping products end to end.",
+  lede:
+    "React and Next.js interfaces, Python and Go services, and AWS-backed deployments — from database design through production.",
+  paragraphs: [
+    "Erik Parra Williams is a full-stack and backend software engineer with a B.S. in Computer Science from California State University, Fullerton. Certified through the UCLA Extension Full-Stack Web Development program, with strengths in taking ideas from sketch to ship.",
+    "Lead contract developer for a WooCommerce e-commerce business — owning the storefront, third-party API integrations, and a Go payout service backed by hundreds of automated tests. Deploys on AWS with Docker and CI/CD, from database design through production.",
+  ],
+};
+
 export const projects = [
   {
     id: 0,
@@ -35,6 +46,7 @@ export const projects = [
     title: "Faucet",
     tags: ["Solidity", "Web3", "Ethereum"],
     image: "/img/nft.webp",
+    imageAlt: "Faucet interface with donate and withdraw actions",
     description:
       "Donate and withdraw funds from a smart contract through a simple faucet interface.",
     repo: "https://github.com/EPW80/faucet",

@@ -3,13 +3,15 @@ import { resumePdfHref } from "../data/site";
 
 function Resume() {
   return (
-    <section id="resume" className="section" data-section>
+    <section id="resume" className="section" data-section aria-labelledby="resume-title">
       <div className="section__head">
         <p className="section__eyebrow">Resume</p>
-        <h2 className="section__title">Experience on one page</h2>
+        <h2 id="resume-title" className="section__title">
+          Experience on one page
+        </h2>
         <p className="section__lede">
           Roles, education, and project highlights — ready to share with a
-          hiring team.
+          hiring team. Project details are in <a href="#work">selected work</a>.
         </p>
       </div>
       <div className="resume-panel">

@@ -8,10 +8,12 @@ function ProjectCard({ project, index }) {
   const mediaInner = hasImage ? (
     <img
       src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, "")}`}
-      alt={`${project.title} preview`}
-      width={640}
-      height={400}
+      alt={project.imageAlt || ""}
+      width={913}
+      height={507}
+      sizes="(min-width: 901px) 50vw, 100vw"
       loading="lazy"
+      decoding="async"
     />
   ) : (
     <div className="project-card__placeholder" aria-hidden="true">
@@ -51,12 +53,22 @@ function ProjectCard({ project, index }) {
         ) : null}
         <div className="project-card__actions">
           {hasRepo ? (
-            <a href={project.repo} target="_blank" rel="noopener noreferrer">
+            <a
+              href={project.repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${project.title} repository`}
+            >
               Repository
             </a>
           ) : null}
           {hasLive ? (
-            <a href={project.live} target="_blank" rel="noopener noreferrer">
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${project.title} live site`}
+            >
               Live site
             </a>
           ) : null}

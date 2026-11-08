@@ -31,11 +31,13 @@ function App() {
   return (
     <>
       <Nav activeSection={activeSection} />
-      <Hero />
-      <Portfolio />
-      <About />
-      <Resume />
-      <Contact />
+      <main id="main">
+        <Hero />
+        <Portfolio />
+        <About />
+        <Resume />
+        <Contact />
+      </main>
       <Footer />
     </>
   );
